@@ -1,0 +1,549 @@
+@font-face {
+    font-family:'FuturaPTLight';
+    src: url('../fonts/FuturaPT-Light.eot');
+    src: url('../fonts/FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Light.woff') format('woff'),
+    url('../fonts/FuturaPT-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    }
+    @font-face {
+    font-family:'FuturaPTMedium';
+    src: url('../fonts/FuturaPT-Medium.eot');
+    src: url('../fonts/FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Medium.woff') format('woff'),
+    url('../fonts/FuturaPT-Medium.ttf') format('truetype');
+    font-weight: 500px;
+    font-style: normal;
+    }
+  @font-face {
+    font-family: 'Futura PT Bold';
+    src: url('../fonts/FuturaPT-Bold.eot');
+    src: url('../fonts/FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/FuturaPT-Bold.woff') format('woff'),
+    url('../fonts/FuturaPT-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    }
+  
+    @media ((max-width: 799px) and (max-height: 899px)) {
+
+      body{
+        height: 100%;
+        overflow-x: hidden;
+        background-image: url(../img/location003.jpg) ;
+        background-size: cover;  
+        background-attachment: fixed;
+     background-position: center;
+  width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+  
+  
+  
+    }
+     .pusto2{z-index: 999;
+      overflow: hidden;
+      height: 150vh;
+    width: 100vw;
+      margin-right:0 ;
+      background-color: rgba(27, 27, 27, 0);
+      display: flex;
+      flex-direction: column;
+      
+     }
+     
+      #c {
+        background: rgba(0, 0, 0, 0);
+    height: 100vh;
+    z-index: 999;
+    display: block;
+    position: fixed;
+   
+    
+        
+     }
+
+    
+.logo-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+
+}
+.logo-img{
+ position: fixed;
+  margin-top:87vh;
+  width: 20vw; 
+  z-index: 999;
+}
+     
+   .ul-menu{width: 100vw;
+   
+  
+     display: flex;
+      justify-content:space-between;
+      z-index: 998;
+   }
+   .ul-menu li {
+    list-style-type: none;
+   }
+     .inst{
+      position: fixed;
+    margin-top: 90vh;
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+      width: 15vw; 
+     }
+     .phone{
+      margin-top: 90vh;
+      position: fixed;
+      transform: translateX(0);
+      transition: transform 0.5s;
+        width: 15vw; 
+     }
+    
+     .wrapper-body{
+      margin: 0;
+      width: 100%;
+      height: 150vh;
+      background-image: url(../img/park.JPG);
+      background-size: cover;
+      background-attachment: fixed;
+      
+      
+    }
+    .wrapper-main{
+
+    
+    }
+    .wrapper-footer{
+    display: block;
+   position: fixed;
+      z-index: 999;
+  margin-top: 97vh;
+      overflow-x: hidden;
+      height: 3vh;
+      width: 100vw;
+        font-family: 'FuturaPTLight';
+      font-size: 20px;
+     color: #ffffff;
+     background: rgb(26, 25, 25);
+ 
+
+     
+  
+     text-align: center;
+  
+    }
+
+    .wrapper-text{
+
+
+    }
+    .video03_01{
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      outline: 2px solid tomato;
+    }
+
+    .video01_02{
+  position: relative;
+  width: 100%;
+  outline: 2px solid tomato;
+   margin-left: auto;
+    margin-right: auto;
+  
+}
+.video02_01{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid tomato;
+}
+.video03_01{
+ 
+  width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  outline: 2px solid tomato;
+}
+
+.video01{
+  position: absolute;
+
+  width: 80vw;
+  outline: 2px solid rgb(3, 3, 3);
+ z-index: 998;
+margin-top: 100vh;
+margin-left: 10%;
+
+}
+
+.video02{
+  position: absolute;
+  margin-left:10%;
+  width:80vw;
+  outline: 2px solid rgb(0, 0, 0);
+  margin-right: auto;
+  margin-top: 310vh;
+  z-index: 998;
+
+}
+.video03{
+  position: absolute;
+
+  width: 80vw;
+  outline: 2px solid rgb(3, 3, 3);
+ z-index: 998;
+margin-top: 500vh;
+margin-left:10%;
+}
+.bmx{
+  position: absolute;
+  z-index: 999;
+  margin-top: 450vh;
+  margin-left: 30vh;
+  width: 75px;
+}
+.scoot{
+  
+    position: absolute;
+    z-index: 998;
+    margin-top: 230vh;
+    margin-left:5vh;
+    width: 75px;
+  }
+
+.logotip{
+  position: absolute;
+ height: 420px;
+  margin-left:0;
+  margin-top: 220vh;
+  z-index: 998;
+  
+}
+/*descriptions*/
+.wrapper-description{
+  display: flex;
+
+
+}
+.description{
+  background-color: #98bcd18e;
+  position: absolute;
+  font-family:'FuturaPTLight';
+  font-size: 23px;
+  z-index: 998;
+  color: #000000;
+  width: 80vw;
+  margin-top: 200vh;
+  margin-left: 10%;
+  line-height: 0.7;
+  letter-spacing: 1px;
+  text-align:center;
+
+
+
+}
+.description2{
+  background-color: #dfa8c68c;
+  position: absolute;
+  font-family:'FuturaPTLight';
+  font-size: 23px;
+  z-index: 998;
+  color: #000000;
+  width:80vw;
+  margin-top: 400vh;
+  margin-left: 10%;
+  line-height: 0.7;
+  letter-spacing: 1px;
+  text-align:center;
+  
+
+}
+
+.description3{
+  background-color: #e4e6797e;
+  position: absolute;
+  font-family:'FuturaPTLight';
+  font-size: 23px;
+  z-index: 998;
+  color: #000000;
+  width: 80vw;
+  
+  margin-top: 650vh;
+  margin-left: 10%;
+  line-height: 0.7;
+  letter-spacing: 1px;
+  text-align:center;
+  
+
+}
+
+  
+ .wrapper-button{
+ 
+  
+  display: flex;
+  justify-content: center;
+  
+  
+  }
+  
+  /*менюююю*/
+  
+  .object-menu {
+    background-color: #dfa8c6;
+    position: fixed;
+    display: none;
+   height: 100%;
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    z-index: 999;
+transition: 0.3s;
+  
+  }
+  
+  .menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff008c;
+  }
+  
+  .close-button {
+    font-family: 'FuturaPTBold';
+  
+    position: absolute;
+    margin: auto 0 0 0;
+    right: 10px;
+    cursor: pointer;
+    z-index: 999;
+    color: #ffffff;
+  }
+  
+
+  .object-menu ul {
+  height: 100vh;
+  width: 100vw;
+    outline: 2px solid #000000; 
+    background-color: #0dff00b1;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+   
+  .object-menu li { 
+    font-family: 'FuturaPTBold';
+    font-size: 35px;
+    color: #000;
+    display: inline;
+    width: 100%;
+    padding: 25px;
+    text-decoration: none;
+  }
+  
+  .object-menu a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  .object-menu a:hover {
+    color: #555;
+    background-color: #eee;
+    cursor: pointer;
+  }
+}
+    
+
+
+@media ((max-width: 799px) and (min-height: 799px)) {
+  .wrapper-description{
+    display: flex;
+  
+  
+  }
+  .description{
+    background-color: #98bcd18e;
+    position: absolute;
+    font-family:'FuturaPTLight';
+    font-size: 23px;
+    z-index: 998;
+    color: #000000;
+    width: 80vw;
+    margin-top: 200vh;
+    margin-left: 10%;
+    line-height: 0.7;
+    letter-spacing: 1px;
+    text-align:center;
+  
+  
+  
+  }
+  .description2{
+    background-color: #dfa8c68c;
+    position: absolute;
+    font-family:'FuturaPTLight';
+    font-size: 23px;
+    z-index: 998;
+    color: #000000;
+    width:80vw;
+    margin-top: 400vh;
+    margin-left: 10%;
+    line-height: 0.7;
+    letter-spacing: 1px;
+    text-align:center;
+    
+  
+  }
+  
+  .description3{
+    background-color: #e4e6797e;
+    position: absolute;
+    font-family:'FuturaPTLight';
+    font-size: 23px;
+    z-index: 998;
+    color: #000000;
+    width: 80vw;
+    
+    margin-top: 650vh;
+    margin-left: 10%;
+    line-height: 0.7;
+    letter-spacing: 1px;
+    text-align:center;
+    
+  
+}
+
+
+
+
+.wrapper-button{
+
+
+
+  display: flex;
+  justify-content: center;
+
+  
+  
+  }
+  
+  /*менюююю*/
+  
+  .overlay{
+  
+    position: fixed;
+    width: 100%;
+    height: 100%;
+     background-color: rgb(0, 0, 0);
+  
+    
+  }
+  .menu-button{
+    
+    display: flex;
+   bottom: 3vh;
+  
+    position: fixed;
+  height: 50px;
+  margin: 15px;
+  border-radius: 50%;
+  border:#ffffff;
+  
+   background-color: rgba(0, 0, 0, 0.568);
+    width: 50px;
+      justify-content: center;
+  align-items: center;
+  transition-property:  background-color;
+  transition-duration: 0.3s;
+  
+  
+  }
+  
+  .menu-button p{
+  
+  font-size: 60px;
+  font-family: 'Futura PT Bold';
+    color: #ffffff;
+  }
+  .menu-button:hover{
+   background-color: #ffffff;
+   color: #000;
+  }
+  
+  
+  
+  
+  .wrapper-menu{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+  }
+  
+  .menu{
+  
+  bottom: 3vh;
+  position: fixed;
+    color: #ccc;
+
+    width: 90%;
+    display: flex;
+   justify-content:space-around;
+  
+  margin: 10px;
+  
+  }
+  
+  
+  .wrapper-link{
+    color: #ff0000;
+  
+    transition-property: background-color;
+  transition-duration: 0.3s;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  outline: 2px solid #ff0000;
+  background-color: black;
+  
+  }
+  .wrapper-link:hover{
+    background-color: azure;
+    color: violet;
+  
+    
+  }
+  
+  .hide{
+    display: none;
+   }
+  
+   .link-menu{
+    display: flex;
+    margin: 10px;
+    outline: 1px solid salmon ;
+  text-decoration: none;
+  justify-content: center;
+   align-items: center;
+   width: 24%;
+   }
+  
+  
+   .menu p{
+    font-size: 30px;
+    font-family:'FuturaPTMedium';
+  
+    
+  
+   }
+  
+}
+
