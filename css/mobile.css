@@ -122,8 +122,8 @@
     display: block;
    position: fixed;
       z-index: 999;
-  margin-top: 97vh;
-      overflow-x: hidden;
+  margin: auto;
+        overflow: hidden;
       height: 3vh;
       width: 100vw;
         font-family: 'FuturaPTLight';
@@ -189,7 +189,7 @@ margin-left: 10%;
   width:80vw;
   outline: 2px solid rgb(0, 0, 0);
   margin-right: auto;
-  margin-top: 310vh;
+  margin-top: 350vh;
   z-index: 998;
 
 }
@@ -233,17 +233,17 @@ margin-left:10%;
 
 }
 .description{
-  background-color: #98bcd18e;
+  /* background-color: #98bcd100; */
   position: absolute;
   font-family:'FuturaPTLight';
   font-size: 23px;
   z-index: 998;
   color: #000000;
   width: 80vw;
-  margin-top: 200vh;
+  margin-top: 0vh;
   margin-left: 10%;
-  line-height: 0.7;
-  letter-spacing: 1px;
+  /* line-height: 0.7;
+  letter-spacing: 1px; */
   text-align:center;
 
 
@@ -269,8 +269,8 @@ margin-left:10%;
 .description3{
   background-color: #e4e6797e;
   position: absolute;
-  font-family:'FuturaPTLight';
-  font-size: 23px;
+  font-family:'FuturaPTMedium';
+  font-size: 21px;
   z-index: 998;
   color: #000000;
   width: 80vw;
@@ -297,14 +297,21 @@ margin-left:10%;
   /*менюююю*/
   
   .object-menu {
-    background-color: #dfa8c6;
+    top: 0;
+  left: 0;
+    background-color: #ffffffe9;
+    background-image: url(../img/indoorskprk.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: -10% 100%;
+
     position: fixed;
     display: none;
    height: 100%;
     width: 100%;
     list-style: none;
     text-decoration: none;
-    z-index: 999;
+    z-index: 9999;
 transition: 0.3s;
   
   }
@@ -314,14 +321,14 @@ transition: 0.3s;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ff008c;
+    background-color: #ff008c00;
   }
   
   .close-button {
     font-family: 'FuturaPTBold';
   
     position: absolute;
-    margin: auto 0 0 0;
+    margin: 0 0 0 0;
     right: 10px;
     cursor: pointer;
     z-index: 999;
@@ -332,8 +339,12 @@ transition: 0.3s;
   .object-menu ul {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
     outline: 2px solid #000000; 
-    background-color: #0dff00b1;
+    background-color: #00000000;
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -343,7 +354,9 @@ transition: 0.3s;
     font-family: 'FuturaPTBold';
     font-size: 35px;
     color: #000;
-    display: inline;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     padding: 25px;
     text-decoration: none;
@@ -351,11 +364,11 @@ transition: 0.3s;
   
   .object-menu a {
     text-decoration: none;
-    color: #ffffff;
+    color: #000000;
   }
   
   .object-menu a:hover {
-    color: #555;
+    color: #f3f3f3;
     background-color: #eee;
     cursor: pointer;
   }
@@ -370,16 +383,17 @@ transition: 0.3s;
   
   }
   .description{
-    background-color: #98bcd18e;
+    background-color: #00000000;
     position: absolute;
-    font-family:'FuturaPTLight';
+    font-family:'FuturaPTMedium';
     font-size: 23px;
     z-index: 998;
-    color: #000000;
+    color: #151515;
     width: 80vw;
     margin-top: 200vh;
     margin-left: 10%;
     line-height: 0.7;
+    outline: 0px solid #000000;
     letter-spacing: 1px;
     text-align:center;
   
@@ -387,31 +401,31 @@ transition: 0.3s;
   
   }
   .description2{
-    background-color: #dfa8c68c;
+    background-color: #ff008c00;
     position: absolute;
-    font-family:'FuturaPTLight';
+    font-family:'FuturaPTMedium';
     font-size: 23px;
     z-index: 998;
-    color: #000000;
+    color: #b178ad;
     width:80vw;
     margin-top: 400vh;
     margin-left: 10%;
     line-height: 0.7;
     letter-spacing: 1px;
     text-align:center;
-    
+    outline: 0px solid #000000;
   
   }
   
   .description3{
-    background-color: #e4e6797e;
+    background-color: #e4e67900;
     position: absolute;
-    font-family:'FuturaPTLight';
+    font-family:'FuturaPTMedium';
     font-size: 23px;
     z-index: 998;
     color: #000000;
     width: 80vw;
-    
+    outline: 0px solid #000000;
     margin-top: 650vh;
     margin-left: 10%;
     line-height: 0.7;
