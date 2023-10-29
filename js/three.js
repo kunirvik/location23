@@ -877,7 +877,7 @@ tl3.to("#c",{ yPercent:42,
           let tl208 = gsap.timeline({
             scrollTrigger: {
               trigger: ".description2",
-              start: "-550px",
+              start: "-570px",
          
            pin:  true,
              
@@ -936,7 +936,7 @@ tl3.to("#c",{ yPercent:42,
             let tl208 = gsap.timeline({
               scrollTrigger: {
                 trigger: ".description3",
-                start: "-550px",
+                start: "-570px",
            
              pin:  true,
                
