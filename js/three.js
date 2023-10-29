@@ -551,7 +551,7 @@ tl3.to("#c",{ yPercent:43,
         scrollTrigger: {
           trigger: ".video01",
           start: "-10%",
-       end:"950px",
+       end:"1000px",
        pin:  true,
        
         
@@ -591,7 +591,7 @@ tl3.to("#c",{ yPercent:43,
         let tl208 = gsap.timeline({
           scrollTrigger: {
             trigger: ".description",
-            start: "-440%",
+            start: "-80% 64%",
        
          pin:  true,
            
@@ -609,7 +609,7 @@ tl3.to("#c",{ yPercent:43,
             let tl208 = gsap.timeline({
               scrollTrigger: {
                 trigger: ".description",
-                start: "-600%",
+                start: "-80% 60%",
            
              pin:  true,
                
@@ -842,7 +842,7 @@ tl3.to("#c",{ yPercent:43,
       let tl2081 = gsap.timeline({
         scrollTrigger: {
           trigger: ".description2",
-          start: "-440%",
+          start: "-80% 64%",
     
           pin:  true,
          
@@ -877,7 +877,7 @@ tl3.to("#c",{ yPercent:43,
           let tl208 = gsap.timeline({
             scrollTrigger: {
               trigger: ".description2",
-              start: "-400%",
+              start: "-80% 60%",
          
            pin:  true,
              
@@ -917,7 +917,7 @@ tl3.to("#c",{ yPercent:43,
         let tl228 = gsap.timeline({
           scrollTrigger: {
             trigger: ".description3",
-            start: "-490%",
+            start: "-80% 64%",
          
             pin:  true,
            
@@ -935,7 +935,7 @@ tl3.to("#c",{ yPercent:43,
             let tl208 = gsap.timeline({
               scrollTrigger: {
                 trigger: ".description3",
-                start: "-510%",
+                start: "-80% 59%",
            
              pin:  true,
                
