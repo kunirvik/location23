@@ -46,6 +46,7 @@
 
     body{
       overflow-x: hidden;
+      
       background-image: url(../img/location003.jpg) ;
       background-size: cover;  
       background-attachment: fixed;
