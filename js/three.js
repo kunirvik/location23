@@ -490,7 +490,7 @@ let tl3 = gsap.timeline({
  
   }
 });
-tl3.to("#c",{ yPercent:42,
+tl3.to("#c",{ yPercent:43,
   x:0,
    scale: 0.17,});
     }, 
@@ -507,7 +507,7 @@ tl3.to("#c",{ yPercent:42,
       });
       tl3.to("#c",{ yPercent:42,
         x:0,
-         scale: 0.17,});
+         scale: 0.2,});
           }, })
 
     ScrollTrigger.matchMedia({
@@ -534,8 +534,8 @@ tl3.to("#c",{ yPercent:42,
           let tl11 = gsap.timeline({
             scrollTrigger: {
               trigger: ".video01",
-              start: "-8%",
-           end:"1000px",
+              start: "-7.5%",
+           end:"850px",
            pin:  true,
            
             
@@ -550,8 +550,8 @@ tl3.to("#c",{ yPercent:42,
       let tl11 = gsap.timeline({
         scrollTrigger: {
           trigger: ".video01",
-          start: "-120px",
-       end:"1000px",
+          start: "-10%",
+       end:"950px",
        pin:  true,
        
         
@@ -574,7 +574,7 @@ tl3.to("#c",{ yPercent:42,
     let tl5 = gsap.timeline({
       scrollTrigger: {
         trigger: ".description",
-        start: "-300px",
+        start: "-30%",
         end: "clamp(2000vh)",
     
      pin:  true,
@@ -591,7 +591,7 @@ tl3.to("#c",{ yPercent:42,
         let tl208 = gsap.timeline({
           scrollTrigger: {
             trigger: ".description",
-            start: "0px",
+            start: "-440%",
        
          pin:  true,
            
@@ -601,7 +601,7 @@ tl3.to("#c",{ yPercent:42,
         });
       
       
-        tl208.from(".description", {y:500 } );
+        tl208.from(".description", {y:500, scale:0 } );
           },
     
           "(max-width: 799px) and (min-height: 799px)": function() {
@@ -609,7 +609,7 @@ tl3.to("#c",{ yPercent:42,
             let tl208 = gsap.timeline({
               scrollTrigger: {
                 trigger: ".description",
-                start: "-570px",
+                start: "-600%",
            
              pin:  true,
                
@@ -619,7 +619,7 @@ tl3.to("#c",{ yPercent:42,
             });
           
           
-            tl208.from(".description", {y:0, scale:0 } );
+            tl208.from(".description", {y:500, scale:0 } );
               },
         
     });
@@ -690,8 +690,8 @@ tl3.to("#c",{ yPercent:42,
         let tl2 = gsap.timeline({
           scrollTrigger: {
             trigger: ".video02",
-            start: "-8%",
-         end:"1000px",
+            start: "-7.5%",
+         end:"700px",
          pin:  true,
        
           
@@ -700,7 +700,7 @@ tl3.to("#c",{ yPercent:42,
         });
       
       
-        tl2.from(".video02", { y:300, opacity:0, } );
+        tl2.from(".video02", { y:300,  } );
           },
       
     
@@ -709,8 +709,8 @@ tl3.to("#c",{ yPercent:42,
             let tl2 = gsap.timeline({
               scrollTrigger: {
                 trigger: ".video02",
-                start: "-120px",
-             end:"600px",
+                start: "-10%",
+             end:"540px",
              pin:  true,
            
               
@@ -732,8 +732,8 @@ tl3.to("#c",{ yPercent:42,
     let tl8 = gsap.timeline({
       scrollTrigger: {
         trigger: ".video03",
-        start: "-200px",
-        end: "clamp(2000vh)",
+        start: "-20%",
+        end: "clamp(2100vh)",
       
      pin:  true,
         pinSpacing:false,
@@ -750,8 +750,8 @@ tl3.to("#c",{ yPercent:42,
           
           scrollTrigger: {
             trigger: ".video03",
-            start: "-8%",
-            end:"1500px",
+            start: "-7.5%",
+            end:"440px",
          pin:  true,
           
           
@@ -760,7 +760,7 @@ tl3.to("#c",{ yPercent:42,
         });
       
       
-        tl2.from(".video03", { y:300, } );
+        tl2.from(".video03", { y:300, opacity:0 } );
           },
       
           "(max-width: 799px) and (min-height: 799px)": function() {
@@ -768,8 +768,8 @@ tl3.to("#c",{ yPercent:42,
             let tl2 = gsap.timeline({
               scrollTrigger: {
                 trigger: ".video03",
-                start: "-120px",
-             end:"1300px",
+                start: "-10%",
+             end:"500px",
              pin:  true,
            
               
@@ -842,7 +842,7 @@ tl3.to("#c",{ yPercent:42,
       let tl2081 = gsap.timeline({
         scrollTrigger: {
           trigger: ".description2",
-          start: "-590px",
+          start: "-440%",
     
           pin:  true,
          
@@ -877,7 +877,7 @@ tl3.to("#c",{ yPercent:42,
           let tl208 = gsap.timeline({
             scrollTrigger: {
               trigger: ".description2",
-              start: "-570px",
+              start: "-600%",
          
            pin:  true,
              
@@ -918,7 +918,7 @@ tl3.to("#c",{ yPercent:42,
         let tl228 = gsap.timeline({
           scrollTrigger: {
             trigger: ".description3",
-            start: "-8%",
+            start: "-490%",
          
             pin:  true,
            
@@ -936,7 +936,7 @@ tl3.to("#c",{ yPercent:42,
             let tl208 = gsap.timeline({
               scrollTrigger: {
                 trigger: ".description3",
-                start: "-570px",
+                start: "-510%",
            
              pin:  true,
                
