@@ -27,19 +27,18 @@
     }
     
   
-    @media ((max-width: 799px) and (max-height: 899px)) {
+    @media ((max-width: 799px) and (max-height: 799px)) {
 
       body{
-        height: 100%;
+        
         overflow-x: hidden;
         background-image: url(../img/location003.jpg) ;
         background-size: cover;  
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
      background-position: center;
   width: 100%;
      margin-left: auto;
      margin-right: auto;
-  
   
   
     }
@@ -104,7 +103,7 @@
       transition: transform 0.5s;
         width: 15vw; 
      }
-    
+/*     
      .wrapper-body{
       margin: 0;
       width: 100%;
@@ -114,13 +113,13 @@
       background-attachment: fixed;
       
       
-    }
+    } */
     .wrapper-main{
 
     
     }
     .wrapper-footer{
-    display: block;
+    display: flex;
    position: fixed;
       z-index: 999;
   margin: auto;
@@ -175,19 +174,21 @@
 
 .video01{
   position: absolute;
-
-  width: 90%;
+height: 80%;
+width: auto;
+  /* width: 90%; */
   outline: 2px solid rgb(3, 3, 3);
  z-index: 998;
-margin-top: 100vh;
-margin-left: 5%;
-
+margin-top: 150vh;
+/* margin-left:auto; */
+padding: 10%;
 }
 
 .video02{
   position: absolute;
-  margin-left: 5%;
-  width:90%;
+  margin-left: 2.5%;
+  height: 80%;
+  width: auto;
   outline: 2px solid rgb(0, 0, 0);
 
   margin-top: 350vh;
@@ -197,12 +198,12 @@ margin-left: 5%;
 }
 .video03{
   position: absolute;
-
-  width: 90%;
+  height: 80%;
+  width: auto;
   outline: 2px solid rgb(3, 3, 3);
  z-index: 998;
 margin-top: 550vh;
-margin-left: 5%;
+margin-left: 2.5%;
 }
 .bmx{
   position: absolute;
@@ -243,7 +244,7 @@ margin-left: 5%;
   z-index: 998;
   color: #000000;
   width: 80vw;
-  margin-top: 200vh;
+  margin-top: 150vh;
   margin-left: 10%;
   line-height: 0.7;
   letter-spacing: 1px;
@@ -383,7 +384,8 @@ transition: 0.3s;
   .video01{
     position: absolute;
     
-    width: 90%;
+    height: 80%;
+    width: auto;
     outline: 2px solid rgb(3, 3, 3);
    z-index: 998;
   margin-top: 100vh;
@@ -394,7 +396,8 @@ transition: 0.3s;
   .video02{
     position: absolute;
     margin-left: 5%;
-    width:90%;
+    height: 80%;
+    width: auto;
     outline: 2px solid rgb(0, 0, 0);
   
     margin-top: 350vh;
@@ -405,7 +408,8 @@ transition: 0.3s;
   .video03{
     position: absolute;
   
-    width: 90%;
+    height: 80%;
+    width: auto;
     outline: 2px solid rgb(3, 3, 3);
    z-index: 998;
   margin-top: 550vh;
