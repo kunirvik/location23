@@ -439,7 +439,10 @@ position: fixed;
   width: 100%;
 }
 
-
+.pusto{
+  display: none;
+  height: 100vh;
+}
 
 .wrapper-button{
   display: flex;

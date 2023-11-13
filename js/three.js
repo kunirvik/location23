@@ -109,7 +109,9 @@ import { OBJLoader } from 'https://threejsfundamentals.org/threejs/resources/thr
 // import { ScrollTrigger } from 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js';
 
 document.addEventListener('DOMContentLoaded', function () {
-
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
 async function main() {
     const canvas = document.querySelector('#c');
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
@@ -212,171 +214,7 @@ async function main() {
     });
 
     
-    // if (window.innerWidth > 799 && window.innerHeight > 800) {
-    // Определите переменные для управления анимацией и меню
-//     let selectedObject = null;
-//     let isAnimating = false;
-//     let rotationProgress = 0;
-//     const rotationSpeed = 0.1;
 
-//     const objectMenu = document.querySelector('#object-menu');
-//     let isMenuOpen = false;
-
-//     function positionMenu(event) {
-//         const x = event.clientX;
-//         const y = event.clientY;
-//         const screenWidth = window.innerWidth;
-//         const screenHeight = window.innerHeight;
-    
-//         // if (screenWidth <= 799 && screenHeight <= 800) {
-//         //     objectMenu.style.left = "0px"; // Измените левое положение меню
-//         //     objectMenu.style.top = "0px"// Добавьте класс для мобильной версии
-//         // } else {
-//         //       objectMenu.style.left = 1050+ "px";
-//         // objectMenu.style.top = 15+ "px";
-        
-//         // }
-//         objectMenu.style.left = 50+ "px";
-//         objectMenu.style.top = 15+ "px"
-//      objectMenu.style.display = "block";
-//     }
-
-//     function hideMenu() {
-//         objectMenu.style.display = "none";
-//     }
-
-//     function onDocumentMouseClick(event) {
-//         event.preventDefault();
-
-//         if (isAnimating) return;
-
-//         const intersects = getIntersects(event.clientX, event.clientY);
-
-//         if (intersects.length > 0) {
-//             selectedObject = intersects[0].object;
-
-//             if (!isMenuOpen) {
-//                 isAnimating = true;
-//                 positionMenu(event);
-//                 isMenuOpen = true;
-
-//                 function animateRotation() {
-//                     if (rotationProgress < Math.PI * 2) {
-//                         rotationProgress += rotationSpeed;
-//                         selectedObject.rotation.y += rotationSpeed;
-//                         requestAnimationFrame(animateRotation);
-//                     } else {
-//                         isAnimating = false;
-//                         rotationProgress = 0;
-//                     }
-//                 }
-
-//                 animateRotation();
-//             } else {
-//                 hideMenu();
-//                 isMenuOpen = false;
-//             }
-//         } else if (isMenuOpen) {
-//             hideMenu();
-//             isMenuOpen = false;
-//         }
-//     }
-
-//     function getIntersects(x, y) {
-//         const raycaster = new THREE.Raycaster();
-//         const mouseVector = new THREE.Vector2();
-//         mouseVector.x = (x / window.innerWidth) * 2 - 1;
-//         mouseVector.y = -(y / window.innerHeight) * 2 + 1;
-//         raycaster.setFromCamera(mouseVector, camera);
-//         return raycaster.intersectObject(ourObj, true);
-//     }
-
-//     document.addEventListener("click", onDocumentMouseClick, false);
-
-//     document.addEventListener("click", (event) => {
-//         if (isMenuOpen && selectedObject) {
-//             const intersects = getIntersects(event.clientX, event.clientY);
-
-//             if (intersects.length === 0) {
-//                 hideMenu();
-//                 isMenuOpen = false;
-//             }
-//         }
-//     });
-//     // Инициализация анимации объекта при прокрутке
-//     function initializeObjectAnimation() {
-
-//         const tl001 = gsap.timeline({
-//             scrollTrigger: {
-//                 trigger: "#c",
-//                 start: "top top",
-//                 end: "1000px",
-//                scrub:true,
-//             }
-//         });    
-
-//   tl001.to(ourObj.scale, {
-//     x: 0.015,
-//     y: 0.015,
-//     z: 0.015,
-//    onComplete: () => {
-    
-//         ourObj.position.set(0, 0, 0); // Установите позицию объекта в центр экрана
-//         camera.position.set(0, 3.5, 10); // Установите позицию камеры, чтобы она смотрела на объект
-//         camera.lookAt(ourObj.position); // Установите направление камеры на объект
-//     }
-   
-//  }); 
-//  tl001.to(ourObj.position, {
-//     y: 3.5,
-//     // onUpdate: () => {
-//     //     camera.lookAt(ourObj.position); // Обновите направление камеры на объект
-//     // }, // Сместите объект вверх (по вашему желанию)
-//     // onUpdate: () => {
-//     //     camera.lookAt(ourObj.position); // Обновите направление камеры на объект
-//     // },
-// });
-// // tl001.to(ourObj.position, {
-// //     x: 3.5, // Измените эту позицию на -2, чтобы объект сместился влево
-// //     y: 1.5, // Измените эту позицию на 2, чтобы объект сместился вверх
-// //      // onComplete: () => {
-// //     //     // Установите позицию камеры на центр объекта
-// //     //     // camera.position.copy(ourObj.position);
-// //     //     // camera.lookAt(ourObj.position);
-// //     // } // onComplete: () => {
-// //     //         // Установите позицию камеры на центр объекта
-// //     //         camera.lookAt(ourObj.position);
-// //     //     }, // z: -16,
-// // }, );
-// // }, );
-  
-
-
- 
-//     }
-        
-
-
-//     // Добавьте ScrollTrigger для анимации объекта
-//     ScrollTrigger.create({
-//         trigger: "#c",
-//         start: "top top",
-//         end: "1000px",
-       
-//         onToggle: self => {
-//             if (self.isActive) {
-//                 initializeObjectAnimation();
-              
-               
-               
-//             }
-//         }
-        
-//     });
-
-
-
-          // }
           const cElement = document.querySelector('#c');
   const objectMenu = document.querySelector('.object-menu');
   const closeMenuButton = document.querySelector('#close-menu');
@@ -480,7 +318,7 @@ if (ScrollTrigger.isTouch !== 2) {
       
           },
  
-    "(max-width: 799px) and (max-height: 799px)": function() {
+    "(max-width: 799px) and (max-height: 899px)": function() {
 let tl3 = gsap.timeline({
   scrollTrigger: {
     trigger: "#c",
@@ -495,20 +333,9 @@ tl3.to("#c",{ yPercent:43,
    scale: 0.17,});
     }, 
   
-    "(max-width: 799px) and (min-height: 799px)": function() {
-      let tl3 = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#c",
-          start: "top",
-          scrub: 1,
-          end: "200vh ",
-       
-        }
-      });
-      tl3.to("#c",{ yPercent:42,
-        x:0,
-         scale: 0.2,});
-          }, })
+
+        
+        })
 
     ScrollTrigger.matchMedia({
       
@@ -529,13 +356,13 @@ tl3.to("#c",{ yPercent:43,
         },
 
     
-        "(max-width: 799px) and (max-height: 799px)": function() {
+        "(max-width: 799px) and (max-height: 899px)": function() {
         
           let tl11 = gsap.timeline({
             scrollTrigger: {
               trigger: ".video01",
               start: "top top+=5%",
-           end:"1200px",
+              end: "bottom+=75%",
            pin:  true,
           
             
@@ -545,21 +372,7 @@ tl3.to("#c",{ yPercent:43,
       tl11.from(".video01", { y:100,   } );
     },
     
-    "(max-width: 799px) and (min-height: 799px)": function() {
-        
-      let tl11 = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".video01",
-          start: "top top+=5%",
-       end:"1000px",
-       pin:  true,
-       
-        
-      
-        }
-    });
-    tl11.from(".video01", { y:100,   } );
-    },
+
     
     
     
@@ -578,7 +391,7 @@ tl3.to("#c",{ yPercent:43,
      
         start: "top top+=25% ", // Начало анимации при приближении нижней границы элемента к верхней границе окна
         // end: "bottom center",
-      end: "clamp(2000vh)",
+      end: "clamp(2300vh)",
       pin:  true,  
      
         pinSpacing:false,
@@ -589,7 +402,7 @@ tl3.to("#c",{ yPercent:43,
     tl5.from(".description", {y:700, duration:1.5, scale: 0});
     
       },
-      "(max-width: 799px) and (max-height: 799px)": function() {
+      "(max-width: 799px) and (max-height: 899px)": function() {
         
         let tl208 = gsap.timeline({
           scrollTrigger: {
@@ -597,7 +410,7 @@ tl3.to("#c",{ yPercent:43,
             start: "top top+=70%",
        
          pin:  true,
-           
+         end: "bottom+=350%",
           
         
           }
@@ -607,30 +420,14 @@ tl3.to("#c",{ yPercent:43,
         tl208.from(".description", {y:500, scale:0 } );
           },
     
-          "(max-width: 799px) and (min-height: 799px)": function() {
-        
-            let tl208 = gsap.timeline({
-              scrollTrigger: {
-                trigger: ".description",
-                start: "top top+=70%",
-           
-             pin:  true,
-               
-              
-            
-              }
-            });
-          
-          
-            tl208.from(".description", {y:500, scale:0 } );
-              },
+     
         
     });
     
     
     ScrollTrigger.matchMedia({
     
-      "(max-width: 799px) and (max-height: 799px)": function() {
+      "(max-width: 799px) and (max-height: 899px)": function() {
       
         let tl11 = gsap.timeline({
           scrollTrigger: {
@@ -644,22 +441,7 @@ tl3.to("#c",{ yPercent:43,
     });
     tl11.from(".logo-img", { y:100,   });
     },
-    
-    "(max-width: 799px) and (min-height: 799px)": function() {
-      
-    let tl11 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".logo-img",
-        start: "-120px",
-     
-     pin:  true,
-     
-      
-    
-      }
-    });
-    tl11.from(".logo-img", { y:100,   } );
-    },
+ 
     
     
     });
@@ -688,13 +470,13 @@ tl3.to("#c",{ yPercent:43,
     
     tl4.from(".video02", { y:100});
       },
-      "(max-width: 799px) and (max-height: 799px)": function() {
+      "(max-width: 799px) and (max-height: 899px)": function() {
         
         let tl2 = gsap.timeline({
           scrollTrigger: {
             trigger: ".video02",
             start: "top top+=5%",
-         end:"700px",
+            end: "bottom+=85%",
          pin:  true,
        
           
@@ -707,84 +489,12 @@ tl3.to("#c",{ yPercent:43,
           },
       
     
-          "(max-width: 799px) and (min-height: 799px)": function() {
-        
-            let tl2 = gsap.timeline({
-              scrollTrigger: {
-                trigger: ".video02",
-                start: "top top+=5%",
-             end:"540px",
-             pin:  true,
-           
-              
-            
-              }
-            });
-          
-          
-            tl2.from(".video02", { y:300, opacity:0, } );
-              },
+      
       
     });
     
     
-    ScrollTrigger.matchMedia({
-    
-      "(min-width: 800px)": function() {
-    
-    let tl8 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".video03",
-        start: "top top+=15% ",
-        end: "clamp(2100vh)",
-      
-     pin:  true,
-        pinSpacing:false,
-      markers:true,
-     
-      }
-    });
-    
-    tl8.from(".video03", { y:100});
-      },
-      "(max-width: 799px) and (max-height: 799px)": function() {
-        
-        let tl2 = gsap.timeline({
-          
-          scrollTrigger: {
-            trigger: ".video03",
-            start: "top top+=5%",
-            end:"440px",
-         pin:  true,
-          
-          
-        
-          }
-        });
-      
-      
-        tl2.from(".video03", { y:300, opacity:0 } );
-          },
-      
-          "(max-width: 799px) and (min-height: 799px)": function() {
-        
-            let tl2 = gsap.timeline({
-              scrollTrigger: {
-                trigger: ".video03",
-                start: "top top+=5%",
-             end:"500px",
-             pin:  true,
-           
-              
-            
-              }
-            });
-          
-          
-            tl2.from(".video03", { y:300, opacity:0, } );
-              },
-    
-    });
+   
     
     ScrollTrigger.matchMedia({
       "(min-width: 800px)": function() {
@@ -804,7 +514,7 @@ tl3.to("#c",{ yPercent:43,
     
     tl6.from(".logotip", { y:100});
     },
-    "(max-width: 799px)": function() {
+    " (max-width: 799px) and (max-height: 899px)": function() {
         
       let tl208 = gsap.timeline({
         scrollTrigger: {
@@ -840,61 +550,87 @@ tl3.to("#c",{ yPercent:43,
     });
     tl55.from(".description2", {y:700, duration:1.5 });
     },
-    "(max-width: 799px) and (max-height: 799px)": function() {
+    "(max-width: 799px) and (max-height: 899px)": function() {
         
       let tl2081 = gsap.timeline({
         scrollTrigger: {
           trigger: ".description2",
           start: "top top+=70%",
-    
+          end: "bottom+=350%",
           pin:  true,
          
         
       
         },
         
-          // "(max-width: 799px) and (min-height: 799px)": function() {
-        
-          //   let tl208 = gsap.timeline({
-          //     scrollTrigger: {
-          //       trigger: ".description",
-          //       start: "-8%",
-          //    pin:  true,
-               
-              
-            
-          //     }
-          //   });
-          
-          
-          //   tl208.from(".description", {y:500 } );
-          //     },
+       
       });
     
     
       tl2081.from(".description2", {y:500,  scale:0} );
         },
         
-        "(max-width: 799px) and (min-height: 799px)": function() {
-        
-          let tl208 = gsap.timeline({
-            scrollTrigger: {
-              trigger: ".description2",
-              start: "top top+=70%",
-         
-           pin:  true,
-             
-            
-          
-            }
-          });
-        
-        
-          tl208.from(".description2", {y:500,   scale:0 } );
-            },
+
     });
     
+     ScrollTrigger.matchMedia({
     
+      "(min-width: 800px)": function() {
+    
+    let tl8 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".video03",
+        start: "top top+=15% ",
+        end: "clamp(2150vh)",
+      
+     pin:  true,
+        pinSpacing:false,
+      markers:true,
+     
+      }
+    });
+    
+    tl8.from(".video03", { y:100});
+      },
+      "(max-width: 799px) and (max-height: 899px)": function() {
+        
+        let tl2000 = gsap.timeline({
+          
+          scrollTrigger: {
+            trigger: ".video03",
+            start: "top top+=5%",
+            end: "bottom+=75%",
+             
+         pin:  true,
+
+          
+        
+          }
+        });
+      
+      
+        tl2000.from(".video03", { y:300 } );
+          },
+      
+          // "(max-width: 799px) and (min-height: 799px)": function() {
+        
+          //   let tl2 = gsap.timeline({
+          //     scrollTrigger: {
+          //       trigger: ".video03",
+          //       start: "top top+=5%",
+          //    end:"500px",
+          //    pin:  true,
+           
+              
+            
+          //     }
+          //   });
+          
+          
+          //   tl2.from(".video03", { y:300, opacity:0, } );
+          //     },
+    
+    });
     ScrollTrigger.matchMedia({
     
       "(min-width: 800px)": function() {
@@ -915,13 +651,16 @@ tl3.to("#c",{ yPercent:43,
     
       },
     
-      "(max-width: 799px) and (max-height: 799px)": function() {
+      "(max-width: 799px) and (max-height: 899px)": function() {
         
         let tl228 = gsap.timeline({
           scrollTrigger: {
             trigger: ".description3",
             start: "top top+=70%",
-         
+            end: "bottom+=350%",
+           
+        
+            
             pin:  true,
            
           
@@ -933,88 +672,53 @@ tl3.to("#c",{ yPercent:43,
         tl228.from(".description3", {y:500,  scale:0} );
           },
     
-          "(max-width: 799px) and (min-height: 799px)": function() {
-        
-            let tl208 = gsap.timeline({
-              scrollTrigger: {
-                trigger: ".description3",
-                start: "top top+=70%",
-           
-             pin:  true,
-               
-              
-            
-              }
-            });
-          
-          
-            tl208.from(".description3", {y:500,  scale:0 } );
-              },
+       
     });
     
     
     
     
     
-    ScrollTrigger.matchMedia({
+    // ScrollTrigger.matchMedia({
     
-      "(min-width: 800px)": function() {
+    //   "(min-width: 800px)": function() {
     
-    let tl555 = gsap.timeline({
-     x:500,
-      scrollTrigger: {
-        trigger: "wrapper-main",
-        start: "1000px",
-        end: "clamp(505vh)",
+    // let tl555 = gsap.timeline({
+    //  x:500,
+    //   scrollTrigger: {
+    //     trigger: "wrapper-main",
+    //     start: "1000px",
+    //     end: "clamp(505vh)",
     
-        scrub:true,
+    //     scrub:true,
      
-      }
-    });
-    tl555.from(".menu-button", {y:100, duration:1.5 });
+    //   }
+    // });
+    // tl555.from(".menu-button", {y:100, duration:1.5 });
     
-      },
+    //   },
     
-      "(max-width: 799px) and (max-height: 799px)": function() {
+    //   "(max-width: 799px) and (max-height: 899px)": function() {
      
-        let tl228 = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".menu-button",
-            start: "-600px",
+    //     let tl228 = gsap.timeline({
+    //       scrollTrigger: {
+    //         trigger: ".menu-button",
+    //         start: "-600px",
            
-            pin:  true,
+    //         pin:  true,
            
           
         
-          }
-        });
+    //       }
+    //     });
       
       
-        tl228.from(".menu-button", {y:-500 } );
-          },
+    //     tl228.from(".menu-button", {y:-500 } );
+    //       },
     
-          "(max-width: 799px) and (min-height: 799px)": function() {
-        
-            let tl208 = gsap.timeline({
-              scrollTrigger: {
-                trigger: ".menu-button",
-                start: "-700px",
-           
-             pin:  true,
-               
-              
-            
-              }
-            });
-          
-          
-            tl208.from(".menu-button", {y:-500 } );
-              },
-    });
+    
+    // });
     }
 
 });
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
